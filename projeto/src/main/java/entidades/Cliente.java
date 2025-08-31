@@ -6,10 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Categoria {
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer codigo;
+    public Integer codigo;
 
-    private String nome;
+    public String nome;
+
+    public String cpf;
 }
