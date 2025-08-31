@@ -1,5 +1,8 @@
 package entidades;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
@@ -11,7 +14,7 @@ public class Venda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer codigo;
 
-    public LocalDateTime horario;
+    public LocalDateTime  horario;
 
     public double valorTotal;
 
