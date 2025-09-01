@@ -18,7 +18,7 @@ public class Venda {
 
     public double valorTotal;
 
-    public double quantidadeTotal;
+    public Integer quantidadeTotal;
 
     @ManyToOne
     public Cliente cliente;
