@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import java.time.LocalDateTime;
 
 @Entity
