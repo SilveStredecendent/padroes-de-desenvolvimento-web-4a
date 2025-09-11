@@ -11,7 +11,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 public class Fabricante extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer codigo;
+    public Integer codigo;
 
-    private String nome;
+    public String nome;
 }
