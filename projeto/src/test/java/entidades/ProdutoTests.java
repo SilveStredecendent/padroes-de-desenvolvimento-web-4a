@@ -9,10 +9,10 @@ import io.quarkus.test.junit.QuarkusTest;
 import jakarta.transaction.Transactional;
 
 @QuarkusTest
-public class CategoriaTests {
+public class ProdutoTests {
     @Test
     @Transactional
-    public void testSalvaUmaCategoriaEBuscaCategoriaSalva() {
+    public void testBuscaCategoriaBuscaUmFabricanteSalvaUmProduto() {
 
         Categoria categoria = Categoria.findById(11);
         Fabricante fabricante = Fabricante.findById(11);
@@ -20,6 +20,7 @@ public class CategoriaTests {
         Produto produto = new Produto();
 
         produto.nome = "Macarrão Espaguete 500Gm";
+
         produto.preco = 9.00;
         produto.quantidade = 30;
         produto.validade = LocalDate.of(2026, 4, 30);
@@ -27,6 +28,7 @@ public class CategoriaTests {
         produto.fabricante = fabricante;
 
         produto.persist();
-        Assertions.assertEquals(11, produto.codigo);
+        Assertions.assertEquals(12, produto.codigo);
     }
+
 }

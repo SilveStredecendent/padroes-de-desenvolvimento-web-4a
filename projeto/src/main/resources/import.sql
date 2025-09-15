@@ -9,6 +9,8 @@ insert into Categoria (nome) values ('Salgadinhos');
 insert into Categoria (nome) values ('Padaria');
 insert into Categoria (nome) values ('Congelados');
 
+insert into Categoria (nome) values ('Massas');
+
 insert into Fabricante (nome) values ('Nestlé');
 insert into Fabricante (nome) values ('Unilever ');
 insert into Fabricante (nome) values ('Pepsico');
@@ -19,6 +21,8 @@ insert into Fabricante (nome) values ('Ambev');
 insert into Fabricante (nome) values ('Colgate-Palmolive');
 insert into Fabricante (nome) values ('Bauducco');
 insert into Fabricante (nome) values ('BRF');
+
+insert into Fabricante (nome) values ('Adria');
 
 INSERT INTO Funcionario (nome, cpf) VALUES ('João Silva', '351.492.784-11');
 INSERT INTO Funcionario (nome, cpf) VALUES ('Maria Oliveira', '582.639.105-00');
