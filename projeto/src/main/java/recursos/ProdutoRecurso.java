@@ -2,13 +2,14 @@ package recursos;
 
 import java.util.List;
 
-import com.arjuna.ats.internal.jdbc.drivers.modifiers.list;
-
 import entidades.Produto;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
-@Path("Produtos")
+@Path("produtos")
 public class ProdutoRecurso {
-    public List<Produto> Listar(){
+    @GET
+    public List<Produto> listar(){
         return Produto.listAll();
     }
 }
