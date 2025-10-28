@@ -1,59 +1,73 @@
-# projeto
+# Projeto Ogiser (Projeto de Estudos)
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+> API REST desenvolvida para fins de estudo, aplicando conceitos de Java e Quarkus.
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+## Sobre o Projeto
 
-## Running the application in dev mode
+Este é um **projeto de estudos** focado em aplicar conceitos de desenvolvimento backend com Java, Quarkus e JPA/Hibernate.
 
-You can run your application in dev mode that enables live coding using:
+O projeto está em constante evolução. Novas funcionalidades são implementadas progressivamente, acompanhando o avanço das aulas e dos tópicos de estudo. O objetivo principal é servir como um "playground" para testar e consolidar o aprendizado.
 
-```shell script
+## Features (Planejadas ou em Implementação)
+
+As funcionalidades abaixo são implementadas ou planejadas conforme os tópicos de estudo são introduzidos:
+
+  * [x] Configuração de ambiente com Dev Containers (Codespaces)
+  * [x] Modelagem de Entidades com JPA/Panache
+  * [x] População de banco de dados com `import.sql`
+  * [x] Exposição de endpoints `GET` (Listagem)
+  * [ ] Endpoints `GET` com parâmetros (Busca por ID)
+  * [ ] Endpoints `POST` (Criação)
+  * [ ] Endpoints `PUT` (Atualização)
+  * [ ] Endpoints `DELETE` (Remoção)
+  * [ ] Implementação de lógica de negócio (Services)
+  * [ ] Testes de unidade e integração
+
+## Tecnologias Principais
+
+  * **Backend:** Java (Ex: 21)
+  * **Framework:** Quarkus
+  * **Banco de Dados:** MySQL (via Docker)
+  * **Persistência:** Hibernate ORM com Panache
+  * **Ambiente:** GitHub Codespaces / Dev Containers (Docker)
+  * **Gerenciador de Pacotes:** Maven
+
+## Como Rodar o Projeto (Ambiente de Desenvolvimento)
+
+Este projeto é configurado para ser executado dentro de um **Dev Container** (GitHub Codespaces ou VS Code Local). Isso garante que todo o ambiente (Java, Maven, Banco de Dados) seja configurado automaticamente.
+
+### Opção 1: GitHub Codespaces (Recomendado)
+
+1.  Na página principal do repositório, clique em **"\<\> Code"** \> **"Codespaces"**.
+2.  Clique em **"Create codespace on main"**.
+
+### Opção 2: VS Code Local (Requer Docker)
+
+1.  Clone o repositório e abra a pasta no VS Code.
+2.  Tenha o [Docker Desktop](https://www.docker.com/products/docker-desktop/) rodando.
+3.  O VS Code detectará a pasta `.devcontainer` e perguntará se você quer **"Reopen in Container"**. Clique sim.
+
+-----
+
+### Iniciando a Aplicação
+
+Após o contêiner carregar (seja no Codespaces ou local), abra o terminal do VS Code e execute:
+
+```bash
 ./mvnw quarkus:dev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
+A aplicação estará disponível em `http://localhost:8080`.
 
-## Packaging and running the application
+## Endpoints da API (Atuais)
 
-The application can be packaged using:
+Abaixo estão os endpoints implementados até o momento.
 
-```shell script
-./mvnw package
-```
-
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using:
-
-```shell script
-./mvnw package -Dnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
-
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/projeto-2025.08.21-runner`
-
-If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
-
-## Related Guides
-
-- Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
-- JDBC Driver - MySQL ([guide](https://quarkus.io/guides/datasource)): Connect to the MySQL database via JDBC
+| Método | URL | Descrição |
+| :--- | :--- | :--- |
+| `GET` | `/produtos` | Lista todos os produtos. |
+| `GET` | `/clientes` | Lista todos os clientes. |
+| `GET` | `/funcionarios` | Lista todos os funcionários. |
+| `GET` | `/categorias` | Lista todas as categorias. |
+| `GET` | `/fabricantes` | Lista todos os fabricantes. |
+| `GET` | `/vendas` | Lista todas as vendas e seus itens. |
