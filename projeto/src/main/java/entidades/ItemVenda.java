@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.json.bind.annotation.JsonbTransient;
 
 @Entity
 public class ItemVenda extends PanacheEntityBase{
@@ -20,6 +21,7 @@ public class ItemVenda extends PanacheEntityBase{
     @ManyToOne
     public Produto produto;
 
+    @JsonbTransient
     @ManyToOne
     public Venda venda;
 }
